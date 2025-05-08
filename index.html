@@ -280,9 +280,9 @@ h1 {
     }
     #orde:hover{
       transition: 2s;
-      background: linear-gradient(120deg,blue,purple,black);
+      background: linear-gradient(120deg,rgb(142, 142, 203),rgb(221, 166, 221),rgb(206, 153, 153));
       border: 2px solid red;
-      color: white;
+      color: rgb(0, 0, 0);
       border-radius: 20px;
     }
     </style>
@@ -1356,9 +1356,10 @@ function scart(){
 
     
     function sendDiv() {
-      const html = document.getElementById("cartpage").innerHTML;
-      localStorage.setItem("sharedDiv", html);
-      alert("Div content sent!");
+      const html = encodeURIComponent(document.getElementById("content").outerHTML);
+      const link = `receiver.html?data=${html}`;
+      document.getElementById("shareLink").href = link;
+      document.getElementById("shareLink").textContent = link;
     }
 
 

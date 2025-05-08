@@ -150,14 +150,13 @@
   <div id="receivedDiv" style="border-radius: 20px;text-align: center;"></div>
   <script>
     function loadDiv() {
-      const html = localStorage.getItem("sharedDiv");
-      if (html) {
-        document.getElementById("receivedDiv").innerHTML = html;
-        document.getElementById("butno").style.display="none"
-        document.getElementById("orde").style.display="none"
-      } else {
-        document.getElementById("receivedDiv").innerText = "No div data found.";
-      }
+        const params = new URLSearchParams(window.location.search);
+    const raw = params.get("data");
+    if (raw) {
+      document.getElementById("target").innerHTML = decodeURIComponent(raw);
+    } else {
+      document.getElementById("target").textContent = "No data received.";
+    }
     }
     setInterval(loadDiv,5000);
   </script>
