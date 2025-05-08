@@ -278,16 +278,22 @@ h1 {
       border-top: 1px solid #ccc;
       margin: 20px 0;
     }
+    #orde:hover{
+      transition: 2s;
+      background: linear-gradient(120deg,blue,purple,black);
+      border: 2px solid red;
+      color: white;
+      border-radius: 20px;
+    }
     </style>
 </head>
 
 
 <div id="mainpage" style="background-color: #a77171;">
     <nav>
-        <div class="logo">FOOD.MANIA</div>
+        <a href="receiver.html"><div class="logo">FOOD.MANIA</div></a>
       </nav>
     
-      <!-- Hero Section -->
       <section class="ajit" id="home">
         <div class="ajit-content">
           <h1>
@@ -298,10 +304,8 @@ h1 {
         </div>
       </section>
     
-      <!-- Menu Section -->
       <section class="menu" id="menu">
         <div class="menu-grid">
-          <!-- Menu Items -->
           <div class="menu-item">
             <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1" alt="Grilled Steak">
           </div>
@@ -316,7 +320,6 @@ h1 {
         </div>
       </section>
     
-      <!-- Footer -->
       <footer id="contact">
         <p>Contact us: food mania.com | Phone: 7678260738</p>
         <p>Follow us on social media</p>
@@ -840,7 +843,7 @@ h1 {
 
 
 
-<div id="cartpage" style="border-radius: 20px;">
+<div id="cartpage" style="border-radius: 20px;text-align: center;">
     <div class="type" id="pr" style="opacity: 90%;">
         <img src="https://th.bing.com/th/id/OIP.n277reMbqv2dr1ak8N2PhgHaHa?rs=1&pid=ImgDetMain" alt="Plain Naan">
         <p class="dis">Plain Roti <br> Carving fluffy texture</p>
@@ -994,8 +997,9 @@ h1 {
         <br><div id="pricepr" class="price">&#8377; 300</div>
     </div>
     <div id="statment" style="display: flex;justify-content: center;"><p id="total"></p></div>
+    <button style="font-size: large;text-align: center;margin: auto;transition: 2s;" id="orde" onclick="sendDiv()">order</button><br><br>
 
-    <button onclick="pagchbc()" style="margin: 20px;background-color: #ab5c3c;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 8px; /* Rounded corners */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */cursor: pointer;transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#ab5c3c'; this.style.transform='scale(1)'">back</button>
+    <button id="butno" onclick="pagchbc()" style="margin: 20px;background-color: #ab5c3c;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 8px; /* Rounded corners */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */cursor: pointer;transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#ab5c3c'; this.style.transform='scale(1)'">back</button>
 </div>
 
 
@@ -1345,6 +1349,19 @@ function scart(){
         }
         document.getElementById("total").innerHTML = 20 * document.getElementById("val").innerHTML + 25 * document.getElementById("val1").innerHTML + 35 * document.getElementById("val3").innerHTML + 135 * document.getElementById("val4").innerHTML + 100 * document.getElementById("val5").innerHTML + 120 * document.getElementById("val6").innerHTML + 50 * document.getElementById("val7").innerHTML + 40 * document.getElementById("val8").innerHTML + 400 * document.getElementById("val9").innerHTML + 50 * document.getElementById("val10").innerHTML + 150 * document.getElementById("val11").innerHTML + 130 * document.getElementById("val12").innerHTML + 40 * document.getElementById("val13").innerHTML + 140 * document.getElementById("val14").innerHTML + 240 * document.getElementById("val15").innerHTML + 340 * document.getElementById("val16").innerHTML + 15 * document.getElementById("val17").innerHTML + 130 * document.getElementById("val18").innerHTML + 300 * document.getElementById("val19").innerHTML
     }
+
+
+
+
+
+    
+    function sendDiv() {
+      const html = document.getElementById("cartpage").innerHTML;
+      localStorage.setItem("sharedDiv", html);
+      alert("Div content sent!");
+    }
+
+
 </script>
 </body>
 </html>
