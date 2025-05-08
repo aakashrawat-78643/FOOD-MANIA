@@ -149,7 +149,6 @@
   <h2>Receiver Page</h2>
   <div id="receivedDiv" style="border-radius: 20px;text-align: center;"></div>
   <script>
-    function loadDiv() {
         const params = new URLSearchParams(window.location.search);
     const raw = params.get("data");
     if (raw) {
@@ -157,8 +156,11 @@
     } else {
       document.getElementById("target").textContent = "No data received.";
     }
+    
+    function re(){
+        location.reload();
     }
-    setInterval(loadDiv,5000);
+    setInterval(re,5000);
   </script>
 </body>
 </html>

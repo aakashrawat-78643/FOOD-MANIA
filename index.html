@@ -278,12 +278,22 @@ h1 {
       border-top: 1px solid #ccc;
       margin: 20px 0;
     }
+    #orde{
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
     #orde:hover{
-      transition: 2s;
-      background: linear-gradient(120deg,rgb(142, 142, 203),rgb(221, 166, 221),rgb(206, 153, 153));
-      border: 2px solid red;
-      color: rgb(0, 0, 0);
-      border-radius: 20px;
+      transition:  all 0.3s ease;
+      background-color: #e65c00;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
     }
     </style>
 </head>
@@ -997,7 +1007,7 @@ h1 {
         <br><div id="pricepr" class="price">&#8377; 300</div>
     </div>
     <div id="statment" style="display: flex;justify-content: center;"><p id="total"></p></div>
-    <button style="font-size: large;text-align: center;margin: auto;transition: 2s;" id="orde" onclick="sendDiv()">order</button><br><br>
+    <button id="orde" onclick="sendDiv()">order</button><br><br>
 
     <button id="butno" onclick="pagchbc()" style="margin: 20px;background-color: #ab5c3c;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 8px; /* Rounded corners */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */cursor: pointer;transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#ab5c3c'; this.style.transform='scale(1)'">back</button>
 </div>
