@@ -1366,7 +1366,7 @@ function scart(){
 
     
     function sendDiv() {
-      const html = encodeURIComponent(document.getElementById("content").outerHTML);
+      const html = encodeURIComponent(document.getElementById("cartpage").outerHTML);
       const link = `receiver.html?data=${html}`;
       document.getElementById("shareLink").href = link;
       document.getElementById("shareLink").textContent = link;
