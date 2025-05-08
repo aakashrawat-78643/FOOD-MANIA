@@ -1366,27 +1366,28 @@ function scart(){
 
 
 
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_AUTH_DOMAIN",
-      databaseURL: "YOUR_DB_URL",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_BUCKET",
-      messagingSenderId: "YOUR_MSG_ID",
-      appId: "YOUR_APP_ID"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
+    function syncDivContent() {
+    // Get the content of the div
+    const divContent = document.getElementById('cartpage').innerHTML;
 
-    function sendCart() {
-      const cartHTML = document.getElementById("cartpage").outerHTML;
-      const id = Date.now();
-      db.ref('carts/' + id).set({ html: cartHTML }).then(() => {
-        const link = `receiver.html?id=${id}`;
-        document.getElementById("shareLink").href = link;
-        document.getElementById("shareLink").textContent = link;
-      });
-    }
+    // Store it in localStorage (optional, for persistence on the same device)
+    localStorage.setItem("divContent", divContent);
+
+    // Send the content to the server to sync across devices
+    fetch('https://your-server.com/api/syncDiv', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ content: divContent })
+    }).then(response => {
+      if (response.ok) {
+        console.log("Content synced to server.");
+      } else {
+        console.error("Failed to sync content.");
+      }
+    });
+  }
 
 
 </script>
