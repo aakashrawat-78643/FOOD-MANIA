@@ -16,7 +16,7 @@ h1 {
         .type {
             background-color: #f8f8f8;
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
             display: grid;
             grid-template-columns: 1fr 2fr 1fr; 
             align-items: center;
@@ -296,6 +296,8 @@ h1 {
       box-shadow: 0 6px 12px rgba(0,0,0,0.3);
     }
     </style>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
 </head>
 
 
@@ -1011,7 +1013,7 @@ h1 {
 
     <button id="butno" onclick="pagchbc()" style="margin: 20px;background-color: #ab5c3c;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 8px; /* Rounded corners */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */cursor: pointer;transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#ab5c3c'; this.style.transform='scale(1)'">back</button>
 </div>
-
+<a href="https://aakashrawat-78643.github.io/FOOD-MANIA/receiver.html" id="shareLink"></a>
 
 
 
@@ -1364,12 +1366,26 @@ function scart(){
 
 
 
-    
-    function sendDiv() {
-      const html = encodeURIComponent(document.getElementById("cartpage").outerHTML);
-      const link = `receiver.html?data=${html}`;
-      document.getElementById("shareLink").href = link;
-      document.getElementById("shareLink").textContent = link;
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      databaseURL: "YOUR_DB_URL",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_BUCKET",
+      messagingSenderId: "YOUR_MSG_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    function sendCart() {
+      const cartHTML = document.getElementById("cartpage").outerHTML;
+      const id = Date.now();
+      db.ref('carts/' + id).set({ html: cartHTML }).then(() => {
+        const link = `receiver.html?id=${id}`;
+        document.getElementById("shareLink").href = link;
+        document.getElementById("shareLink").textContent = link;
+      });
     }
 
 

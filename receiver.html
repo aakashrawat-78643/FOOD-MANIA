@@ -147,20 +147,22 @@
 </style>
 <body>
   <h2>Receiver Page</h2>
-  <div id="receivedDiv" style="border-radius: 20px;text-align: center;"></div>
+  <div id="output" style="border-radius: 20px;text-align: center;"></div>
   <script>
-        const params = new URLSearchParams(window.location.search);
-    const raw = params.get("data");
-    if (raw) {
-      document.getElementById("target").innerHTML = decodeURIComponent(raw);
-    } else {
-      document.getElementById("target").textContent = "No data received.";
-    }
+     fetch('https://your-server.com/api/syncDiv')
+    .then(response => response.json())
+    .then(data => {
+      // Display the content in the div
+      document.getElementById('myDiv').innerHTML = data.content;
+    })
+    .catch(error => {
+      console.error("Failed to fetch content:", error);
+    });
     
     function re(){
         location.reload();
     }
-    setInterval(re,5000);
+    setInterval(re,10000);
   </script>
 </body>
 </html>
