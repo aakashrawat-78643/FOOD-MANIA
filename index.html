@@ -135,7 +135,7 @@ h1 {
         }
         #statment{
             color: #333;
-            filter: drop-shadow(2px 2px black);
+            font-weight: bolder;
             text-align: center;
         }
 
@@ -239,6 +239,45 @@ h1 {
 #mainpage .social-icons i {
   font-size: 1.5rem;
 }
+
+#info {
+      background-color: #ffffff;
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+    }
+
+    #info h1, 
+    #info h2 {
+      color: #2c3e50;
+    }
+
+    #info p {
+      color: #34495e;
+      line-height: 1.6;
+    }
+
+    #info .section {
+      margin-bottom: 20px;
+    }
+
+    #info .label {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    #info .value {
+      margin-left: 10px;
+    }
+
+    #info hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
     </style>
 </head>
 
@@ -246,12 +285,6 @@ h1 {
 <div id="mainpage" style="background-color: #a77171;">
     <nav>
         <div class="logo">FOOD.MANIA</div>
-        <div class="nav-links">
-          <a>ajit</a>
-          <a>Menu</a>
-          <a>About</a>
-          <a>Contact</a>
-        </div>
       </nav>
     
       <!-- Hero Section -->
@@ -267,34 +300,18 @@ h1 {
     
       <!-- Menu Section -->
       <section class="menu" id="menu">
-        <h2>special plates</h2>
         <div class="menu-grid">
           <!-- Menu Items -->
           <div class="menu-item">
             <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1" alt="Grilled Steak">
-            <div class="item-info">
-              <h3>special item</h3>
-              <p>this are a special item for customer </p>
-              <div class="price">310</div>
-            </div>
           </div>
     
           <div class="menu-item">
             <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Pasta">
-            <div class="item-info">
-              <h3>pizza</h3>
-              <p>Italian pizza with creamy mushroom sauce</p>
-              <div class="price">250</div>
-            </div>
           </div>
     
           <div class="menu-item">
             <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187" alt="Salad">
-            <div class="item-info">
-              <h3>pestri</h3>
-              <p> delicious and tasty </p>
-              <div class="price">100</div>
-            </div>
           </div>
         </div>
       </section>
@@ -323,12 +340,105 @@ h1 {
 
 
 
+
+
+
+
+
+<div id="info" style="display: none;" onclick="pagchib()">
+  <h1>Diploma Second Year Project</h1>
+
+  <div class="section">
+    <span class="label">Project Title:</span>
+    <span class="value">FOOD MANIA</span>
+  </div>
+
+  <div class="section">
+    <span class="label">Team Members:</span>
+    <span class="value">Aakash(102), Ajeet(105), Ajeet(106), Dushyant(123)</span>
+  </div>
+
+  <div class="section">
+    <h2>Project Description</h2>
+    <p>Food ordering site with only user interface for practice in diploma second year</p>
+  </div>
+
+  <div class="section">
+    <h2>Technologies Used</h2>
+    <p>.html, .css, .js</p>
+  </div>
+
+  <div class="section">
+    <h2>Objective</h2>
+    <p>to store whole site in one webpage making it look like a site with multiple web pages using DIV element in HTML making it possible to share even on whatsapp without needing any addition file or database and can run on any device without any interferrance</p>
+  </div>
+
+  <div class="section">
+    <h2>Conclusion</h2>
+    <p>code gets a little complicated but if arranged properly and name properly its easy to understand can even select food to your desire and make cart you want</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="restaurant" style="display: none;background-color: #a77171;padding: 50px;" onclick="pagchrb()">
+  <h1>Restaurants in Faridabad</h1>
+    <div class="restaurant-list">
+        <div class="restaurant-card">
+            <h3>bhai restaurant</h3>
+            <p>Address: SCF 46, HUDA Market, Sector 3, Faridabad</p>
+            </div>
+        <div class="restaurant-card">
+            <h3>Milan Sweet House</h3>
+            <p>Address: SCF 1 & 2, DLF Market, Block D, Near Vansh Taxi Service, Sector 11, Faridabad</p>
+        </div>
+        <div class="restaurant-card">
+            <h3>Milan Sweet House</h3>
+            <p>Shop 64-65, Sector 10, Faridabad</p>
+        </div>
+        <div class="restaurant-card">
+            <h3>Milan Sweet & Snacks</h3>
+            <p>SCO 89 & 90, Huda Market, Sector 2, Faridabad</p>
+        </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <body style="font-family: sans-serif; background: linear-gradient(20deg, rgb(200, 100, 100), #f0e68c, #f0e68c, rgb(200, 100, 100)); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box;">
     <div id="mainp" style="place-items: center; width: 100%; display: none; flex-direction: column; align-items: center;">
     <div id="block" style="margin-bottom: 30px; width: 90%; max-width: 800px; height: 250px; background-image: url('https://ptaourchildren.org/wp-content/uploads/2018/01/shutterstock_472856638.jpg'); background-size: cover; background-repeat: no-repeat; border-radius: 15px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); place-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-position: center;">
-        <button style="background-color: #e0f2fe; border: none; border-radius: 8px; padding: 10px 20px; font-size: 1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; width: 80%; max-width: 200px;" onmouseover="this.style.backgroundColor='#b3e5fc'" onmouseout="this.style.backgroundColor='#e0f2fe'">Main Page</button>
-        <button style="background-color: #e0f2fe; border: none; border-radius: 8px; padding: 10px 20px; font-size: 1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; width: 80%; max-width: 200px;" onmouseover="this.style.backgroundColor='#b3e5fc'" onmouseout="this.style.backgroundColor='#e0f2fe'">Information</button>
-        <button style="background-color: #e0f2fe; border: none; border-radius: 8px; padding: 10px 20px; font-size: 1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; width: 80%; max-width: 200px;" onmouseover="this.style.backgroundColor='#b3e5fc'" onmouseout="this.style.backgroundColor='#e0f2fe'">Restaurant</button>
+        <button style="background-color: #e0f2fe; border: none; border-radius: 8px; padding: 10px 20px; font-size: 1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; width: 80%; max-width: 200px;" onmouseover="this.style.backgroundColor='#b3e5fc'" onmouseout="this.style.backgroundColor='#e0f2fe'" onclick="off()">Main Page</button>
+        <button style="background-color: #e0f2fe; border: none; border-radius: 8px; padding: 10px 20px; font-size: 1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; width: 80%; max-width: 200px;" onmouseover="this.style.backgroundColor='#b3e5fc'" onmouseout="this.style.backgroundColor='#e0f2fe'" onclick="pagchi()">Information</button>
+        <button style="background-color: #e0f2fe; border: none; border-radius: 8px; padding: 10px 20px; font-size: 1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; width: 80%; max-width: 200px;" onmouseover="this.style.backgroundColor='#b3e5fc'" onmouseout="this.style.backgroundColor='#e0f2fe'" onclick="pagchr()">Restaurant</button>
     </div>
     <div><h1 id="leg" style="text-align: center; margin-bottom: 20px; color: #333;">What would you serve on your plate?</h1></div>
     <div id="contain" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; width: 90%; max-width: 1200px; padding: 20px;">
@@ -337,8 +447,8 @@ h1 {
         <div id="sweets" onclick="pagchm()" style="height: 200px; background-image: url('https://fromyouflowers.pk/product/special-mix-mithai/13-Assorted-Tin-Box-2.jpg'); background-size: cover; background-repeat: no-repeat; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; cursor: pointer; background-position: center;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)'"></div>
         <div id="fast" onclick="pagchf()" style="height: 200px; background-image: url('https://img.freepik.com/premium-photo/fast-food-assortment-junk-food-concept-unhealthy-food-heart-teeth-skin-figure_839035-83486.jpg'); background-size: cover; background-repeat: no-repeat; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; cursor: pointer; background-position: center;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)'"></div>
         <div id="salad" onclick="pagchs()" style="height: 200px; background-image: url('https://culinarybite.com/images/large/exploring-world-cooking-vibrant-summer-salad-bursting-color.webp'); background-size: cover; background-repeat: no-repeat; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; cursor: pointer; background-position: center;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)'"></div>
-        <div id="thali" style="height: 200px; background-image: url('https://i.pinimg.com/originals/e1/da/d5/e1dad5315972c8a9db86fb01d69c7ecb.jpg'); background-size: cover; background-repeat: no-repeat; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; cursor: pointer; background-position: center;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)'"></div>
-        <div id="south" style="height: 200px; background-image: url('https://th.bing.com/th/id/OIP.InlgltnGNwj7W93dJ_oQ_gHaEQ?rs=1&pid=ImgDetMain'); background-size: cover; background-repeat: no-repeat; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; cursor: pointer; background-position: center;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)'"></div>
+        <div id="thali" onclick="pagcht()" style="height: 200px; background-image: url('https://i.pinimg.com/originals/e1/da/d5/e1dad5315972c8a9db86fb01d69c7ecb.jpg'); background-size: cover; background-repeat: no-repeat; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; cursor: pointer; background-position: center;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)'"></div>
+        <div id="south" onclick="pagchsop()" style="height: 200px; background-image: url('https://th.bing.com/th/id/OIP.InlgltnGNwj7W93dJ_oQ_gHaEQ?rs=1&pid=ImgDetMain'); background-size: cover; background-repeat: no-repeat; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; cursor: pointer; background-position: center;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)'"></div>
     </div>
     <button id="ca" onclick="scart()" style="background-color: #ab5c3c;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 8px; /* Rounded corners */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */cursor: pointer;transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#ab5c3c'; this.style.transform='scale(1)'">cart</button>
 </div>
@@ -579,6 +689,123 @@ h1 {
 
 
 
+
+
+
+
+
+<div id="thali_page" style="place-items: center; width: 100%; display: flex; flex-direction: column; align-items: center; display: none;">
+  <h1>Hope you find your choice</h1>
+  <div class="type">
+      <img src="https://thumbs.dreamstime.com/z/small-non-veg-thali-272432901.jpg" alt="burger">
+      <p class="dis">small thali</p>
+      <div class="cho">
+          <button class="pl" onclick="inc14()">+</button>
+          <div id="val14">0</div>
+          <button class="min" onclick="dec14()">-</button>
+      </div><br>
+      <div id="pricepr" class="price">&#8377; 140</div>
+  </div>
+  <div class="type">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.Dq_LO74kYVhhoD16R9bg-gHaFj&rs=1&pid=ImgDetMain" alt="chow">
+      <p class="dis">medium thali</p>
+      <div class="cho">
+          <button class="pl" onclick="inc15()">+</button>
+          <div id="val15">0</div>
+          <button class="min" onclick="dec15()">-</button>
+      </div>
+      <br><div id="pricebn" class="price">&#8377; 240</div>
+  </div>
+  <div class="type">
+      <img src="https://img.freepik.com/premium-photo/indian-hindu-veg-thali-also-known-as-food-platter-is-complete-lunch-dinner-meal-closeup-selective-focus_466689-9137.jpg?w=2000" alt="Butter Naan">
+      <p class="dis">large thali</p>
+      <div class="cho">
+          <button class="pl" onclick="inc16()">+</button>
+          <div id="val16">0</div>
+          <button class="min" onclick="dec16()">-</button>
+      </div>
+      <br><div id="priceap" class="price">&#8377; 340</div>
+  </div>
+  
+  <button onclick="pagchtb()" style="background-color: #ab5c3c;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 8px; /* Rounded corners */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */cursor: pointer;transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#ab5c3c'; this.style.transform='scale(1)'">back</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="south_page" style="place-items: center; width: 100%; display: flex; flex-direction: column; align-items: center; display: none;">
+  <h1>Hope you find your choice</h1>
+  <div class="type">
+      <img src="https://static.toiimg.com/photo/68631114.cms" alt="burger">
+      <p class="dis">idli</p>
+      <div class="cho">
+          <button class="pl" onclick="inc17()">+</button>
+          <div id="val17">0</div>
+          <button class="min" onclick="dec17()">-</button>
+      </div><br>
+      <div id="pricepr" class="price">&#8377; 15</div>
+  </div>
+  <div class="type">
+      <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/06/Plain-Dosa.jpg" alt="chow">
+      <p class="dis">dosa</p>
+      <div class="cho">
+          <button class="pl" onclick="inc18()">+</button>
+          <div id="val18">0</div>
+          <button class="min" onclick="dec18()">-</button>
+      </div>
+      <br><div id="pricebn" class="price">&#8377; 130</div>
+  </div>
+  <div class="type">
+      <img src="https://th.bing.com/th/id/OIP.wiZ5p16hdxP26fJ69TqdEQHaJ4?rs=1&pid=ImgDetMain" alt="Butter Naan">
+      <p class="dis">south india thali</p>
+      <div class="cho">
+          <button class="pl" onclick="inc19()">+</button>
+          <div id="val19">0</div>
+          <button class="min" onclick="dec19()">-</button>
+      </div>
+      <br><div id="priceap" class="price">&#8377; 300</div>
+  </div>
+  
+  <button onclick="pagchsopb()" style="background-color: #ab5c3c;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 8px; /* Rounded corners */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */cursor: pointer;transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#ab5c3c'; this.style.transform='scale(1)'">back</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="sala_page" style="place-items: center; width: 100%; display: flex; flex-direction: column; align-items: center; display: none;">
     <h1>Hope you find your choice</h1>
     <div class="type">
@@ -718,6 +945,54 @@ h1 {
         </div>
         <br><div id="pricepr" class="price">&#8377; 40</div>
     </div>
+    <div class="type" id="smth" style="opacity: 90%;">
+        <img src="https://thumbs.dreamstime.com/z/small-non-veg-thali-272432901.jpg" alt="french fries">
+        <p class="dis">small thali</p>
+        <div class="cho">
+            <div id="val14c">0</div>
+        </div>
+        <br><div id="pricepr" class="price">&#8377; 140</div>
+    </div>
+    <div class="type" id="meth" style="opacity: 90%;">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.Dq_LO74kYVhhoD16R9bg-gHaFj&rs=1&pid=ImgDetMain" alt="french fries">
+        <p class="dis">medium thali</p>
+        <div class="cho">
+            <div id="val15c">0</div>
+        </div>
+        <br><div id="pricepr" class="price">&#8377; 240</div>
+    </div>
+    <div class="type" id="lath" style="opacity: 90%;">
+        <img src="https://img.freepik.com/premium-photo/indian-hindu-veg-thali-also-known-as-food-platter-is-complete-lunch-dinner-meal-closeup-selective-focus_466689-9137.jpg?w=2000" alt="french fries">
+        <p class="dis">large thali</p>
+        <div class="cho">
+            <div id="val16c">0</div>
+        </div>
+        <br><div id="pricepr" class="price">&#8377; 340</div>
+    </div>
+    <div class="type" id="idli" style="opacity: 90%;">
+        <img src="https://static.toiimg.com/photo/68631114.cms" alt="french fries">
+        <p class="dis">idli</p>
+        <div class="cho">
+            <div id="val17c">0</div>
+        </div>
+        <br><div id="pricepr" class="price">&#8377; 15</div>
+    </div>
+    <div class="type" id="dosa" style="opacity: 90%;">
+        <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/06/Plain-Dosa.jpg" alt="french fries">
+        <p class="dis">dosa</p>
+        <div class="cho">
+            <div id="val18c">0</div>
+        </div>
+        <br><div id="pricepr" class="price">&#8377; 130</div>
+    </div>
+    <div class="type" id="soth" style="opacity: 90%;">
+        <img src="https://th.bing.com/th/id/OIP.wiZ5p16hdxP26fJ69TqdEQHaJ4?rs=1&pid=ImgDetMain" alt="french fries">
+        <p class="dis">south indian thali</p>
+        <div class="cho">
+            <div id="val19c">0</div>
+        </div>
+        <br><div id="pricepr" class="price">&#8377; 300</div>
+    </div>
     <div id="statment" style="display: flex;justify-content: center;"><p id="total"></p></div>
 
     <button onclick="pagchbc()" style="margin: 20px;background-color: #ab5c3c;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 8px; /* Rounded corners */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */cursor: pointer;transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#ab5c3c'; this.style.transform='scale(1)'">back</button>
@@ -734,6 +1009,7 @@ h1 {
 
 <script>
     function on(){document.getElementById("mainpage").style.display="none";document.getElementById("mainp").style.display="";}
+    function off(){document.getElementById("mainpage").style.display="";document.getElementById("mainp").style.display="none";}
     function pagch(){document.getElementById("naan_page").style.display="";document.getElementById("mainp").style.display="none";}
     function pagchb(){document.getElementById("naan_page").style.display="none";document.getElementById("mainp").style.display="";}
     function pagchf(){document.getElementById("fast_page").style.display="";document.getElementById("mainp").style.display="none";}
@@ -745,6 +1021,16 @@ h1 {
     function pagchs(){document.getElementById("sala_page").style.display="";document.getElementById("mainp").style.display="none";}
     function pagchsb(){document.getElementById("sala_page").style.display="none";document.getElementById("mainp").style.display="";}
     function pagchbc(){document.getElementById("cartpage").style.display="none";document.getElementById("mainp").style.display="";}
+    function pagcht(){document.getElementById("thali_page").style.display="";document.getElementById("mainp").style.display="none";}
+    function pagchtb(){document.getElementById("thali_page").style.display="none";document.getElementById("mainp").style.display="";}
+    function pagchi(){document.getElementById("info").style.display="";document.getElementById("mainp").style.display="none";}
+    function pagchib(){document.getElementById("info").style.display="none";document.getElementById("mainp").style.display="";}
+    function pagchr(){document.getElementById("restaurant").style.display="";document.getElementById("mainp").style.display="none";}
+    function pagchrb(){document.getElementById("restaurant").style.display="none";document.getElementById("mainp").style.display="";}
+    function pagchsop(){document.getElementById("south_page").style.display="";document.getElementById("mainp").style.display="none";}
+    function pagchsopb(){document.getElementById("south_page").style.display="none";document.getElementById("mainp").style.display="";}
+
+
     function inc() {document.getElementById("val").innerHTML++;document.getElementById("valc").innerHTML++;}
     function dec() {if (document.getElementById("val").innerHTML > 0) {document.getElementById("val").innerHTML--;document.getElementById("valc").innerHTML--;}}
     function inc1() {document.getElementById("val1").innerHTML++;document.getElementById("val1c").innerHTML++;}
@@ -872,6 +1158,72 @@ function dec13() {
     document.getElementById("val13c").innerHTML--;
   }
 }
+function inc14() {
+  document.getElementById("val14").innerHTML++;
+  document.getElementById("val14c").innerHTML++;
+}
+
+function dec14() {
+  if (document.getElementById("val14").innerHTML > 0) {
+    document.getElementById("val14").innerHTML--;
+    document.getElementById("val14c").innerHTML--;
+  }
+}
+function inc15() {
+  document.getElementById("val15").innerHTML++;
+  document.getElementById("val15c").innerHTML++;
+}
+
+function dec15() {
+  if (document.getElementById("val15").innerHTML > 0) {
+    document.getElementById("val15").innerHTML--;
+    document.getElementById("val15c").innerHTML--;
+  }
+}
+function inc16() {
+  document.getElementById("val16").innerHTML++;
+  document.getElementById("val16c").innerHTML++;
+}
+
+function dec16() {
+  if (document.getElementById("val16").innerHTML > 0) {
+    document.getElementById("val16").innerHTML--;
+    document.getElementById("val16c").innerHTML--;
+  }
+}
+function inc17() {
+  document.getElementById("val17").innerHTML++;
+  document.getElementById("val17c").innerHTML++;
+}
+
+function dec17() {
+  if (document.getElementById("val17").innerHTML > 0) {
+    document.getElementById("val17").innerHTML--;
+    document.getElementById("val17c").innerHTML--;
+  }
+}
+function inc18() {
+  document.getElementById("val18").innerHTML++;
+  document.getElementById("val18c").innerHTML++;
+}
+
+function dec18() {
+  if (document.getElementById("val18").innerHTML > 0) {
+    document.getElementById("val18").innerHTML--;
+    document.getElementById("val18c").innerHTML--;
+  }
+}
+function inc19() {
+  document.getElementById("val19").innerHTML++;
+  document.getElementById("val19c").innerHTML++;
+}
+
+function dec19() {
+  if (document.getElementById("val19").innerHTML > 0) {
+    document.getElementById("val19").innerHTML--;
+    document.getElementById("val19c").innerHTML--;
+  }
+}
 
 function scart(){
     document.getElementById("total").innerHTML = " ";
@@ -955,7 +1307,43 @@ function scart(){
         else{
             document.getElementById("sl").style.display=""
         }
-        document.getElementById("total").innerHTML = 20 * document.getElementById("val").innerHTML + 25 * document.getElementById("val1").innerHTML + 35 * document.getElementById("val3").innerHTML + 135 * document.getElementById("val4").innerHTML + 100 * document.getElementById("val5").innerHTML + 120 * document.getElementById("val6").innerHTML + 50 * document.getElementById("val7").innerHTML + 40 * document.getElementById("val8").innerHTML + 400 * document.getElementById("val9").innerHTML + 50 * document.getElementById("val10").innerHTML + 150 * document.getElementById("val11").innerHTML + 130 * document.getElementById("val12").innerHTML + 40 * document.getElementById("val13").innerHTML
+        if(document.getElementById("val14").innerHTML==0){
+            document.getElementById("smth").style.display="none"
+        }
+        else{
+            document.getElementById("smth").style.display=""
+        }
+        if(document.getElementById("val15").innerHTML==0){
+            document.getElementById("meth").style.display="none"
+        }
+        else{
+            document.getElementById("meth").style.display=""
+        }
+        if(document.getElementById("val16").innerHTML==0){
+            document.getElementById("lath").style.display="none"
+        }
+        else{
+            document.getElementById("lath").style.display=""
+        }
+        if(document.getElementById("val17").innerHTML==0){
+            document.getElementById("idli").style.display="none"
+        }
+        else{
+            document.getElementById("idli").style.display=""
+        }
+        if(document.getElementById("val18").innerHTML==0){
+            document.getElementById("dosa").style.display="none"
+        }
+        else{
+            document.getElementById("dosa").style.display=""
+        }
+        if(document.getElementById("val19").innerHTML==0){
+            document.getElementById("soth").style.display="none"
+        }
+        else{
+            document.getElementById("soth").style.display=""
+        }
+        document.getElementById("total").innerHTML = 20 * document.getElementById("val").innerHTML + 25 * document.getElementById("val1").innerHTML + 35 * document.getElementById("val3").innerHTML + 135 * document.getElementById("val4").innerHTML + 100 * document.getElementById("val5").innerHTML + 120 * document.getElementById("val6").innerHTML + 50 * document.getElementById("val7").innerHTML + 40 * document.getElementById("val8").innerHTML + 400 * document.getElementById("val9").innerHTML + 50 * document.getElementById("val10").innerHTML + 150 * document.getElementById("val11").innerHTML + 130 * document.getElementById("val12").innerHTML + 40 * document.getElementById("val13").innerHTML + 140 * document.getElementById("val14").innerHTML + 240 * document.getElementById("val15").innerHTML + 340 * document.getElementById("val16").innerHTML + 15 * document.getElementById("val17").innerHTML + 130 * document.getElementById("val18").innerHTML + 300 * document.getElementById("val19").innerHTML
     }
 </script>
 </body>
