@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Delights</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  </head>
     <style>
 
 h1 {
@@ -296,11 +300,9 @@ h1 {
       box-shadow: 0 6px 12px rgba(0,0,0,0.3);
     }
     </style>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
-</head>
-
-
+  
+  
+  <body style="font-family: sans-serif; background: linear-gradient(20deg, rgb(200, 100, 100), #f0e68c, #f0e68c, rgb(200, 100, 100)); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box;">
 <div id="mainpage" style="background-color: #a77171;">
     <nav>
         <a href="receiver.html"><div class="logo">FOOD.MANIA</div></a>
@@ -448,7 +450,6 @@ h1 {
 
 
 
-<body style="font-family: sans-serif; background: linear-gradient(20deg, rgb(200, 100, 100), #f0e68c, #f0e68c, rgb(200, 100, 100)); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box;">
     <div id="mainp" style="place-items: center; width: 100%; display: none; flex-direction: column; align-items: center;">
     <div id="block" style="margin-bottom: 30px; width: 90%; max-width: 800px; height: 250px; background-image: url('https://ptaourchildren.org/wp-content/uploads/2018/01/shutterstock_472856638.jpg'); background-size: cover; background-repeat: no-repeat; border-radius: 15px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); place-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-position: center;">
         <button style="background-color: #e0f2fe; border: none; border-radius: 8px; padding: 10px 20px; font-size: 1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; width: 80%; max-width: 200px;" onmouseover="this.style.backgroundColor='#b3e5fc'" onmouseout="this.style.backgroundColor='#e0f2fe'" onclick="off()">Main Page</button>
@@ -1013,7 +1014,8 @@ h1 {
 
     <button id="butno" onclick="pagchbc()" style="margin: 20px;background-color: #ab5c3c;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 8px; /* Rounded corners */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */cursor: pointer;transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#ab5c3c'; this.style.transform='scale(1)'">back</button>
 </div>
-<a href="https://aakashrawat-78643.github.io/FOOD-MANIA/receiver.html" id="shareLink"></a>
+<p> <a id="shareLink" style="display:none;" target="_blank"></a></p>
+<p id="status"></p>
 
 
 
@@ -1366,26 +1368,28 @@ function scart(){
 
 
 
-    function syncDivContent() {
-    // Get the content of the div
-    const divContent = document.getElementById('cartpage').innerHTML;
+    const firebaseConfig = {
+    apiKey: "AIzaSyC-gxWyCUeytGQ75grVYpmS_Ina9BOOPo8",
+    authDomain: "foodmania-db285.firebaseapp.com",
+    databaseURL: "https://foodmania-db285-default-rtdb.firebaseio.com", // ✅ Required!
+    projectId: "foodmania-db285",
+    storageBucket: "foodmania-db285.appspot.com",
+    messagingSenderId: "137643950080",
+    appId: "1:137643950080:web:a732a3ff239e56b98b58e5",
+    measurementId: "G-6D561CPDFS"
+  };
 
-    // Store it in localStorage (optional, for persistence on the same device)
-    localStorage.setItem("divContent", divContent);
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
 
-    // Send the content to the server to sync across devices
-    fetch('https://your-server.com/api/syncDiv', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ content: divContent })
-    }).then(response => {
-      if (response.ok) {
-        console.log("Content synced to server.");
-      } else {
-        console.error("Failed to sync content.");
-      }
+  function sendDiv() {
+    const cartHTML = document.getElementById("cartpage").outerHTML;
+    const id = Date.now();
+    db.ref('carts/' + id).set({ html: cartHTML }).then(() => {
+      const link = `receiver.html?id=${id}`;
+      document.getElementById("shareLink").href = link;
+      document.getElementById("shareLink").textContent = link;
+      document.getElementById("status").textContent = "✅ Order sent successfully!";
     });
   }
 

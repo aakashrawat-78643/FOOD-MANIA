@@ -149,20 +149,30 @@
   <h2>Receiver Page</h2>
   <div id="output" style="border-radius: 20px;text-align: center;"></div>
   <script>
-     fetch('https://your-server.com/api/syncDiv')
-    .then(response => response.json())
-    .then(data => {
-      // Display the content in the div
-      document.getElementById('myDiv').innerHTML = data.content;
-    })
-    .catch(error => {
-      console.error("Failed to fetch content:", error);
-    });
-    
-    function re(){
-        location.reload();
+    const firebaseConfig = {
+      apiKey: "AIzaSyC-gxWyCUeytGQ75grVYpmS_Ina9BOOPo8",
+      authDomain: "foodmania-db285.firebaseapp.com",
+      databaseURL: "https://foodmania-db285-default-rtdb.firebaseio.com",
+      projectId: "foodmania-db285",
+      storageBucket: "foodmania-db285.appspot.com",
+      messagingSenderId: "137643950080",
+      appId: "1:137643950080:web:a732a3ff239e56b98b58e5",
+      measurementId: "G-6D561CPDFS"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    if (id) {
+      db.ref('carts/' + id).once('value').then(snapshot => {
+        const data = snapshot.val();
+        document.getElementById("output").innerHTML = data ? data.html : "❌ Cart not found.";
+      });
+    } else {
+      document.getElementById("output").textContent = "❗ No cart ID provided.";
     }
-    setInterval(re,10000);
   </script>
 </body>
 </html>
