@@ -48,24 +48,36 @@
             box-shadow: 0 6px 12px rgba(228, 77, 38, 0.3);
         }
 
-        .btn-secondary {
+        /* Top Navigation Buttons */
+        .top-nav-btn {
             background-color: #ffffff;
             color: #e44d26;
             border: 2px solid #e44d26;
-            padding: 10px 24px;
-            font-size: 16px;
+            padding: 10px;
+            font-size: 14px;
             font-weight: 600;
-            border-radius: 8px;
+            border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin: 10px 5px;
             width: 100%;
             max-width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
         }
 
-        .btn-secondary:hover {
-            background-color: #e44d26;
-            color: white;
+        .top-nav-btn img {
+            width: 100%;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .top-nav-btn:hover {
+            background-color: #fff0ec;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(228, 77, 38, 0.2);
         }
 
         /* Main Landing Page */
@@ -93,7 +105,7 @@
         }
 
         .ajit {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg') center/cover;
             color: white;
             text-align: center;
             padding: 100px 20px;
@@ -146,13 +158,13 @@
             margin: 20px auto 40px;
             width: 90%;
             max-width: 800px;
-            padding: 30px;
+            padding: 25px;
             background: white;
             border-radius: 15px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
@@ -360,9 +372,9 @@
     
     <section class="menu" id="menu">
         <div class="menu-grid">
-            <div class="menu-item"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1" alt="Grilled Steak"></div>
-            <div class="menu-item"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Pasta"></div>
-            <div class="menu-item"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187" alt="Salad"></div>
+            <div class="menu-item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Samosa_in_a_plate.jpg" alt="Samosa"></div>
+            <div class="menu-item"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Dal_Makhni_-_A_Punjabi_Delicacy.jpg" alt="Dal"></div>
+            <div class="menu-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Salad_platter.jpg" alt="Salad"></div>
         </div>
     </section>
     
@@ -413,22 +425,32 @@
 </div>
 
 <div id="mainp" style="display: none;">
+    
     <div id="block">
-        <button class="btn-secondary" onclick="off()">Main Page</button>
-        <button class="btn-secondary" onclick="pagchi()">Information</button>
-        <button class="btn-secondary" onclick="pagchr()">Restaurants</button>
+        <button class="top-nav-btn" onclick="off()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Main Page">
+            Main Page
+        </button>
+        <button class="top-nav-btn" onclick="pagchi()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Open_book_icon.png" style="object-fit: contain;" alt="Information">
+            Information
+        </button>
+        <button class="top-nav-btn" onclick="pagchr()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Restaurant_N%C3%A6sbjerghus_-_Flickr_-_Stig_Nygaard.jpg" alt="Restaurants">
+            Restaurants
+        </button>
     </div>
     
     <h1 id="leg" style="text-align: center; margin-bottom: 30px; color: #2c3e50;">What would you serve on your plate?</h1>
     
     <div id="contain">
-        <div id="naan" class="category-card" onclick="pagch()" style="background-image: url('https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800');"></div>
-        <div id="sabji" class="category-card" onclick="pagchsab()" style="background-image: url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800');"></div>
-        <div id="sweets" class="category-card" onclick="pagchm()" style="background-image: url('https://images.unsplash.com/photo-1589114483742-83210137ceb6?q=80&w=800');"></div>
-        <div id="fast" class="category-card" onclick="pagchf()" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800');"></div>
-        <div id="salad" class="category-card" onclick="pagchs()" style="background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800');"></div>
-        <div id="thali" class="category-card" onclick="pagcht()" style="background-image: url('https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=800');"></div>
-        <div id="south" class="category-card" onclick="pagchsop()" style="background-image: url('https://images.unsplash.com/photo-1630383249896-424e482322ef?q=80&w=800');"></div>
+        <div id="naan" class="category-card" onclick="pagch()" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Naan_004.jpg');"></div>
+        <div id="sabji" class="category-card" onclick="pagchsab()" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/Mix_Vegetable_Curry.jpg');"></div>
+        <div id="sweets" class="category-card" onclick="pagchm()" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/81/Rasgulla_02.jpg');"></div>
+        <div id="fast" class="category-card" onclick="pagchf()" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/47/Hamburger_%28black_bg%29.jpg');"></div>
+        <div id="salad" class="category-card" onclick="pagchs()" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/94/Salad_platter.jpg');"></div>
+        <div id="thali" class="category-card" onclick="pagcht()" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/59/Gujarati_Thali_%288079685370%29.jpg');"></div>
+        <div id="south" class="category-card" onclick="pagchsop()" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6c/South_Indian_Thali.jpg');"></div>
     </div>
     
     <div style="text-align: center; margin-top: 40px;">
@@ -439,7 +461,7 @@
 <div id="naan_page" class="page-container" style="display: none;">
     <h1>Breads & Parathas</h1>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=300" alt="Plain Naan">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Chapati_preparation.jpg" alt="Plain Naan">
         <div>
             <p class="dis">Plain Roti</p>
             <div id="pricepr" class="price">₹ 20</div>
@@ -451,7 +473,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1589647285514-601e3bce7fb2?q=80&w=300" alt="Butter Naan">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Naan_004.jpg" alt="Butter Naan">
         <div>
             <p class="dis">Butter Naan</p>
             <div id="pricebn" class="price">₹ 25</div>
@@ -463,7 +485,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1604152135912-04a022e23696?q=80&w=300" alt="Aloo Paratha">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Aloo_Paratha_also_known_as_Batatay_Jo_Phulko.jpg" alt="Aloo Paratha">
         <div>
             <p class="dis">Aloo Paratha</p>
             <div id="priceap" class="price">₹ 35</div>
@@ -480,7 +502,7 @@
 <div id="sabjipage" class="page-container" style="display: none;">
     <h1>Main Course</h1>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc0?q=80&w=300" alt="Shahee paneer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Shahi_Paneer_Recipe.jpg" alt="Shahee paneer">
         <div>
             <p class="dis">Shahee Paneer</p>
             <div id="pricesp" class="price">₹ 135</div>
@@ -492,7 +514,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=300" alt="Dal makhni">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Dal_Makhni_-_A_Punjabi_Delicacy.jpg" alt="Dal makhni">
         <div>
             <p class="dis">Dal Makhni</p>
             <div id="pricedm" class="price">₹ 100</div>
@@ -504,7 +526,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=300" alt="Mix veg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Mix_Vegetable_Curry.jpg" alt="Mix veg">
         <div>
             <p class="dis">Mix Veg</p>
             <div id="pricemv" class="price">₹ 120</div>
@@ -521,7 +543,7 @@
 <div id="mithai" class="page-container" style="display: none;">
     <h1>Desserts & Sweets</h1>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1589114483742-83210137ceb6?q=80&w=300" alt="Rasmalai">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Rasmalai_1.jpg" alt="Rasmalai">
         <div>
             <p class="dis">Rasmalai (2pc)</p>
             <div class="price">₹ 50</div>
@@ -533,7 +555,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1605197135010-843e99c1598e?q=80&w=300" alt="Rasgulla">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Rasgulla_02.jpg" alt="Rasgulla">
         <div>
             <p class="dis">Rasgulla (2pc)</p>
             <div class="price">₹ 40</div>
@@ -545,7 +567,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1630175860333-5131bda75071?q=80&w=300" alt="Kaju Katli">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Kaju_katli_2.jpg" alt="Kaju Katli">
         <div>
             <p class="dis">Kaju Katli (1kg)</p>
             <div class="price">₹ 400</div>
@@ -562,7 +584,7 @@
 <div id="fast_page" class="page-container" style="display: none;">
     <h1>Fast Food</h1>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=300" alt="burger">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Hamburger_%28black_bg%29.jpg" alt="burger">
         <div>
             <p class="dis">Burger</p>
             <div class="price">₹ 50</div>
@@ -574,7 +596,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=300" alt="chowmien">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Chow_mein_1.jpg" alt="chowmien">
         <div>
             <p class="dis">Chowmein</p>
             <div class="price">₹ 150</div>
@@ -586,7 +608,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?q=80&w=300" alt="french fries">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/French_Fries.jpg" alt="french fries">
         <div>
             <p class="dis">French Fries</p>
             <div class="price">₹ 130</div>
@@ -603,7 +625,7 @@
 <div id="thali_page" class="page-container" style="display: none;">
     <h1>Special Thalis</h1>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=300" alt="small thali">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Gujarati_Thali_%288079685370%29.jpg" alt="small thali">
         <div>
             <p class="dis">Small Thali</p>
             <div class="price">₹ 140</div>
@@ -615,7 +637,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1630489953934-2e987c2f6d23?q=80&w=300" alt="medium thali">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Thali_meal_in_India.jpg" alt="medium thali">
         <div>
             <p class="dis">Medium Thali</p>
             <div class="price">₹ 240</div>
@@ -627,7 +649,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=300" alt="large thali">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/North_Indian_Thali.jpg" alt="large thali">
         <div>
             <p class="dis">Large Thali</p>
             <div class="price">₹ 340</div>
@@ -644,7 +666,7 @@
 <div id="south_page" class="page-container" style="display: none;">
     <h1>South Indian</h1>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1589301760014-d929f39ce9b0?q=80&w=300" alt="idli">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Idli_Sambar.JPG" alt="idli">
         <div>
             <p class="dis">Idli</p>
             <div class="price">₹ 15</div>
@@ -656,7 +678,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1630383249896-424e482322ef?q=80&w=300" alt="dosa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Dosa_at_a_street_shack.jpg" alt="dosa">
         <div>
             <p class="dis">Dosa</p>
             <div class="price">₹ 130</div>
@@ -668,7 +690,7 @@
         </div>
     </div>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1610192773928-768ebf9b3ec2?q=80&w=300" alt="south indian thali">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/South_Indian_Thali.jpg" alt="south indian thali">
         <div>
             <p class="dis">South Indian Thali</p>
             <div class="price">₹ 300</div>
@@ -685,7 +707,7 @@
 <div id="sala_page" class="page-container" style="display: none;">
     <h1>Fresh Salads</h1>
     <div class="type">
-        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=300" alt="salad">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Salad_platter.jpg" alt="salad">
         <div>
             <p class="dis">Plain Salad</p>
             <div class="price">₹ 40</div>
@@ -731,7 +753,7 @@
     </form>
     
     <div style="text-align: center; margin-top: 20px;">
-        <button id="butno" class="btn-secondary" onclick="pagchbc()">Back to Menu</button>
+        <button id="butno" class="btn-secondary" style="max-width: none; width: 100%;" onclick="pagchbc()">Back to Menu</button>
     </div>
 </div>
 
